@@ -61,7 +61,7 @@ public class Controller {
 		
 		
 		// Decrypt
-		int[] decryptedText = decryptPlainText(encryptingKey, x, rk, numEncr);	
+		int[] decryptedText = decryptCipherText(encryptingKey, x, rk, numEncr);	
 	}
 	
 	private int[] encryptPlainText(int[] encryptingKey, int[] plainText, int[] roundKeys, int numEncr){
@@ -95,7 +95,7 @@ public class Controller {
 		return x;
 	}
 	
-	private int[] decryptPlainText(int[] encryptingKey, int[] x, int[] roundKeys, int numEncr){
+	private int[] decryptCipherText(int[] encryptingKey, int[] x, int[] roundKeys, int numEncr){
 		
 		int[] cipherText = new int[4];
 		cipherText[0] = x[31];
